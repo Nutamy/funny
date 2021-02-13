@@ -18,8 +18,8 @@ class RequestAPI:
 @app.get('/')
 def index(request: Request):
     my_req = RequestAPI()
-    dog_img = my_req.get_all()
+    cat_fact = my_req.get_all()
     templates.TemplateResponse('index.html', {
         'request': request, 
-        'dog_img': dog_img
+        'cat_fact': cat_fact
     })

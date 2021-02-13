@@ -13,8 +13,8 @@ class RequestAPI:
 
     def get_all(self):
         result = requests.get(self.url).json()
-        return result.text
-        
+        return result['text']
+
 @app.get('/')
 def index(request: Request):
     my_req = RequestAPI()
